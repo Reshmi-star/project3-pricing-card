@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planora - Pricing Plans</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="hero">
+    <p class="tagline">SIMPLE. FLEXIBLE. AFFORDABLE.</p>
+    <h1>Choose Your Perfect Plan</h1>
+    <p class="subtitle">
+      Find the right plan for your goals. Start small and grow with us.
+    </p>
+
+    <div class="billing-toggle" aria-label="Choose billing period">
+      <button id="monthly" class="active" aria-pressed="true">
+        Monthly
+      </button>
+      <button id="yearly" aria-pressed="false">
+        Yearly <span class="save">Save 20%</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pricing-grid" aria-label="Pricing plans">
+
+      <article class="card">
+        <div class="plan-icon">🌱</div>
+        <h2>Starter</h2>
+        <p class="description">Perfect for getting started.</p>
+
+        <div class="price-line">
+          <span class="currency">₹</span>
+          <span class="price"
+                data-monthly="499"
+                data-yearly="4790">499</span>
+        </div>
+        <p class="unit">per month</p>
+
+        <a class="plan-button" href="mailto:hello@reshmi.com?subject=Starter%20Plan">
+          Get Started
+        </a>
+
+        <p class="features-title">What's included</p>
+        <ul class="features">
+          <li>Access to basic features</li>
+          <li>5 projects</li>
+          <li>1 user account</li>
+          <li>Email support</li>
+          <li>Basic reports</li>
+        </ul>
+      </article>
+
+      <article class="card popular">
+        <div class="ribbon">MOST POPULAR</div>
+        <div class="plan-icon">🚀</div>
+        <h2>Pro</h2>
+        <p class="description">For people ready to grow.</p>
+
+        <div class="price-line">
+          <span class="currency">₹</span>
+          <span class="price"
+                data-monthly="999"
+                data-yearly="9590">999</span>
+        </div>
+        <p class="unit">per month</p>
+
+        <a class="plan-button primary" href="mailto:hello@example.com?subject=Pro%20Plan">
+          Choose Pro
+        </a>
+
+        <p class="features-title">What's included</p>
+        <ul class="features">
+          <li>All Starter features</li>
+          <li>Unlimited projects</li>
+          <li>5 user accounts</li>
+          <li>Priority email support</li>
+          <li>Advanced reports</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="plan-icon">🏢</div>
+        <h2>Team</h2>
+        <p class="description">Made for teams working together.</p>
+
+        <div class="price-line">
+          <span class="currency">₹</span>
+          <span class="price"
+                data-monthly="1999"
+                data-yearly="19190">1999</span>
+        </div>
+        <p class="unit">per month</p>
+
+        <a class="plan-button" href="mailto:hello@example.com?subject=Team%20Plan">
+          Choose Team
+        </a>
+
+        <p class="features-title">What's included</p>
+        <ul class="features">
+          <li>All Pro features</li>
+          <li>Unlimited projects</li>
+          <li>20 user accounts</li>
+          <li>Dedicated support</li>
+          <li>Team performance reports</li>
+        </ul>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Planora. pricing page created for learning.</p>
+    <p>All prices are sample prices for this project.</p>
+  </footer>
+
+</body>
+</html>

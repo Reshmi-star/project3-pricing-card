@@ -1,0 +1,274 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple: #6d4aff;
+  --dark: #211b3a;
+  --muted: #6f6b80;
+  --background: #f7f5ff;
+  --border: #e6e1f2;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--dark);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 20px 35px;
+}
+
+.tagline {
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px;
+  margin-top: 28px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.billing-toggle button {
+  border: none;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.billing-toggle button.active {
+  background: var(--purple);
+  color: white;
+}
+
+.save {
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.pricing-grid {
+  width: min(1100px, calc(100% - 40px));
+  margin: 20px auto 65px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px 25px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(42, 30, 85, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(42, 30, 85, 0.14);
+}
+
+.card.popular {
+  border: 2px solid var(--purple);
+  transform: scale(1.03);
+}
+
+.card.popular:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+.ribbon {
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  background: var(--purple);
+  color: white;
+  padding: 7px 12px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 0 0 8px 8px;
+}
+
+.plan-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 45px;
+}
+
+.price-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 22px;
+}
+
+.currency {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+.price {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.unit {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.plan-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.plan-button:hover,
+.plan-button.primary {
+  background: var(--purple);
+  color: white;
+}
+
+.features-title {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+.features li::before {
+  content: "✓";
+  color: var(--purple);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #211b3a;
+  outline-offset: 4px;
+}
+
+@media (max-width: 800px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+    gap: 25px;
+  }
+
+  .card.popular {
+    order: -1;
+    transform: none;
+  }
+
+  .card.popular:hover {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 380px) {
+  .pricing-grid {
+    width: calc(100% - 24px);
+  }
+
+  .card {
+    padding: 25px 18px;
+  }
+
+  .billing-toggle button {
+    padding: 9px 10px;
+  }
+
+  .save {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+
+  .card:hover,
+  .card.popular,
+  .card.popular:hover {
+    transform: none;
+  }
+}
